@@ -1,8 +1,15 @@
+a{
+text-decoration-line: none;	
+color: black;
+}
+a:hover {
+        color:red;
+}
 .map_wrap, .map_wrap * {
 	margin: 0;
 	padding: 0;
 	font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
-	font-size: 12px;
+	font-size: 13px;
 }
 
 .map_wrap a, .map_wrap a:hover, .map_wrap a:active {
@@ -111,9 +118,9 @@
 #placesList .item .markerbg {
 	float: left;
 	position: absolute;
-	width: 36px;
-	height: 37px;
-	margin: 10px 0 0 10px;
+	width: 40px;
+	height: 40px;
+	margin: 10px 0 0 10px; /*40px 0 0 10px;*/
 	background:
 		url(http://i1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png)
 		no-repeat;

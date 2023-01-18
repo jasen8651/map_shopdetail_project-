@@ -71,14 +71,14 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-4 shop-right column-row p-2 mx-0">
+						<div class="col-4 shop-right column-row p-2 mx-0"  style=" max-height: 290px; max-width:600px; ">
 							<div class="shop-map" id="staticMap"></div>
 							<div class="shop-menu column-low mt-3 p-3" id="shop-menu">
 								<div class="row">
-									<p id="shop-menu">메뉴</p>
+									<p id="shop-menu" style="text-align: center">메뉴</p>
 								</div>
 								<div class="d-flex">
-									<div class="col-9" id="shop-menu-detail" style="overflow: hidden; word-break:break-all; font-size: 13px; font-weight: 900;">
+									<div class="col-9" id="shop-menu-detail" style="overflow: hidden; word-break:break-all; font-size: 13px; font-weight: 900; ">
 										<c:forTokens var="item" items="${menu_namesearch}" delims=",">
 											<p>${item}</p>
 										</c:forTokens>
