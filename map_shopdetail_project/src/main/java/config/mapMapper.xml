@@ -21,4 +21,17 @@
 		 where b.rowm>=#{startpage} and b.rowm<=#{endpage}   
 			 ]]>
 	</select>
+		
+	<insert id="bookmark" parameterType="string">
+		SELECT * FROM food right  outer join 
+   			 bookmark2 on food.foodstore_name  =  bookmark2.foodstore_name;
+	</insert>
+	
+	<insert id="bookmark" parameterType="string">
+		INSERT INTO bookmark2(bookmark_id, bookmark_yncheck)
+		values(bookmark_id.nextval, #{bookmark_yncheck} )
+	</insert>
+	
+
+	
 </mapper>

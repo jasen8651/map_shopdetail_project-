@@ -18,6 +18,8 @@ public class MapDTO {
 	private String tag_store;
 	private String menu_namesearch;
 	private String menu_pricesearch;
+	private String bookmark_yncheck;
+
 
 	public MapDTO() {
 
@@ -157,6 +159,14 @@ public class MapDTO {
 
 	public void setMenu_pricesearch(String menu_pricesearch) {
 		this.menu_pricesearch = menu_pricesearch;
+	}
+
+	public String getBookmark_yncheck() {
+		return bookmark_yncheck;
+	}
+
+	public void setBookmark_yncheck(String bookmark_yncheck) {
+		this.bookmark_yncheck = bookmark_yncheck;
 	}
 	
 	

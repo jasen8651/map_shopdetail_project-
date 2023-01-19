@@ -56,9 +56,10 @@ public class MapController {
 			throws UnsupportedEncodingException {
 		String latitude = httpServletRequest.getParameter("latitude");
 		String longitude = httpServletRequest.getParameter("longitude");
+		String foodstore_id = httpServletRequest.getParameter("foodstore_id");
 		String food_category = httpServletRequest.getParameter("food_category");
 		String img_url = httpServletRequest.getParameter("img_url");
-		String foodstore_id = httpServletRequest.getParameter("foodstore_name");
+		String foodstore_name = httpServletRequest.getParameter("foodstore_name");
 		String store_num = httpServletRequest.getParameter("store_num");
 		String address = httpServletRequest.getParameter("address");
 		String working_time = httpServletRequest.getParameter("working_time");
@@ -68,9 +69,10 @@ public class MapController {
 
 		model.addAttribute("latitude", latitude);
 		model.addAttribute("longitude", longitude);
+		model.addAttribute("foodstore_id", foodstore_id );
 		model.addAttribute("food_category", food_category);
 		model.addAttribute("img_url", img_url);
-		model.addAttribute("foodstore_name", foodstore_id);
+		model.addAttribute("foodstore_name", foodstore_name);
 		model.addAttribute("store_num", store_num);
 		model.addAttribute("address", address);
 		model.addAttribute("working_time", working_time);
@@ -80,4 +82,14 @@ public class MapController {
 
 		return "detailpage";
 	}//end detailpageMethod()
+	
+	
+	@ResponseBody               
+	@RequestMapping(value="/detailpage.do", method = RequestMethod.POST)
+	public String bookmarkMethod(boolean bookmark_yncheck, Model model) {
+		System.out.println("bookmark: " + bookmark_yncheck);
+		service.saveProcess(bookmark_yncheck ? "Y" : "N"); 
+		model.addAttribute("bookmark_yncheck",bookmark_yncheck);
+		return "detailpage";
+	}
 }

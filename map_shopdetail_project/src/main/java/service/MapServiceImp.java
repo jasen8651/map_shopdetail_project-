@@ -31,6 +31,11 @@ public class MapServiceImp implements MapService{
 		return dao.food_countAll(data);
 	}
 	
+	@Override
+	public void saveProcess(String bookmark_yncheck) {
+		dao.bookmark_save(bookmark_yncheck);
+	}
+	
 	
 
 }

@@ -13,18 +13,21 @@
 <link rel="stylesheet" href="css/map.css">
 </head>
 <body>
-
+	<!-- 로고 이미지 -->
 	<div class="pbx top1">
-		<img src="resources/img/logo.png" />
-	</div>
-		
-		<div id="option" >
+	<div id="option" >
+	<!-- 검색창 -->
 				<form onsubmit="searchPlaces(); return false">
 					<span>검색:</span> <input type="text" value="강남구" id="keyword"
-						size="100" />
+						size="30" />
 					<button type="submit">검색하기</button>
 				</form>
 			</div>	
+		<img src="resources/img/logo.png" />
+	</div>
+	<!-- 검색창 -->
+		
+	<!-- 지도 -->		
 	<div class="map_wrap" >
 		<div id="map"
 			style="display: block; margin: 0 auto; width: 60%; height: 99%; position: relative; overflow: hidden;"></div>
@@ -45,6 +48,7 @@
 				alt="축소"></span>
 		</div>
 	</div>
+	<!-- 목록 리스트 -->
 	<div id="menu_wrap" class="bg_white">		
 			<ul id="placesList"></ul>
 			<div id="pagination"></div>

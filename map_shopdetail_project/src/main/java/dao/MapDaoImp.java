@@ -27,5 +27,9 @@ public class MapDaoImp implements MapDao{
 	@Override
 	public int food_countAll(String data) {
 		return sqlSession.selectOne("food.food_countAll",data);
-	}	
+	}
+	@Override
+	public void bookmark_save(String bookmark_yncheck) {
+		sqlSession.insert("food.bookmark",bookmark_yncheck);
+	}
 }

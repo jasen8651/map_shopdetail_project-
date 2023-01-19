@@ -207,6 +207,7 @@ function getListItem(index, search, marker) {
 			+ (index + 1)
 			+ '"></span>'
 			+ '<a href="detailpage.do?latitude=' + `${search.latitude}` + '&longitude=' + `${search.longitude}` 
+	itemStr += '&foodstore_id=' + `${search.foodstore_id}`.replace(" ","+")
 	itemStr += '&food_category=' + `${search.food_category}`.replace(" ","+")
 	itemStr += '&img_url=' + `${search.img_url}`.replace(" ","+") 
 	itemStr += '&foodstore_name=' + `${search.foodstore_name}`.replace(" ","+")
